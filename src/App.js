@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+import { About, Projects, Footer, Header, Testimonial, Portfolio } from './container';
+
+import './App.scss';
+import { Navbar } from './components';
+import { ImagePopup } from './components/ImagePopup/ImagePopup';
+
+const App = () => {
+  const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null)
+
+  function handleCardClick(card) {
+    console.log(card);
+    setSelectedCard(card);
+    setIsImagePopupOpen(true);
+  }
+
+  function handleClosePopup() {
+    setIsImagePopupOpen(false);
+    setSelectedCard(null);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Navbar />
+      <Header />
+      <About />
+      <Projects />
+      <Portfolio 
+        onCardClick={handleCardClick}
+      />
+      <Testimonial />
+      <Footer />
+      <ImagePopup 
+        card={selectedCard}
+        onClose={handleClosePopup}
+        isOpen={isImagePopupOpen}
+      />
     </div>
   );
 }
