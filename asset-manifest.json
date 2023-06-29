@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/sarah-stewart/static/css/main.84733f78.css",
+    "main.js": "/sarah-stewart/static/js/main.337f8753.js",
+    "static/media/slide02.png": "/sarah-stewart/static/media/slide02.679466a3ed172c9192b4.png",
+    "static/media/slide03.png": "/sarah-stewart/static/media/slide03.62fa729e1b277beae0b5.png",
+    "static/media/slide01.png": "/sarah-stewart/static/media/slide01.953685c4e9d6f0f8edea.png",
+    "static/media/slide04.png": "/sarah-stewart/static/media/slide04.f88cc3aee960369e7da6.png",
+    "static/media/slide11.png": "/sarah-stewart/static/media/slide11.169093736cdd0bb7a255.png",
+    "static/media/slide06.png": "/sarah-stewart/static/media/slide06.797d91d338d56ebbf1fb.png",
+    "static/media/slide07.png": "/sarah-stewart/static/media/slide07.efaaa83a5e7e2fdc3bfe.png",
+    "static/media/slide08.png": "/sarah-stewart/static/media/slide08.e6b1072726aaf2b56a33.png",
+    "static/media/slide09.png": "/sarah-stewart/static/media/slide09.b7c273e8cb090fc1829a.png",
+    "static/media/slide10.png": "/sarah-stewart/static/media/slide10.2b50523ca558ea2e1192.png",
+    "static/media/BeachAerial.png": "/sarah-stewart/static/media/BeachAerial.42368565687770b92e84.png",
+    "static/media/slide05.png": "/sarah-stewart/static/media/slide05.490dc0d5c69dd3a80c3a.png",
+    "static/media/about.jpg": "/sarah-stewart/static/media/about.63168a02b000b0d06ba6.jpg",
+    "static/media/project01.jpg": "/sarah-stewart/static/media/project01.4126fb0126185ea4e10e.jpg",
+    "static/media/project03.jpg": "/sarah-stewart/static/media/project03.b00a9c82ac8e12a81c1e.jpg",
+    "static/media/project02.jpg": "/sarah-stewart/static/media/project02.c09214c0643a72a1ad17.jpg",
+    "static/media/Fish_Fossil.png": "/sarah-stewart/static/media/Fish_Fossil.dbd3f6520389e316c69c.png",
+    "static/media/Magnolias.png": "/sarah-stewart/static/media/Magnolias.e113b894e58221357657.png",
+    "static/media/WaterLillies.png": "/sarah-stewart/static/media/WaterLillies.bd43791bf2292b8dd771.png",
+    "static/media/The_Yellow_Umbrella.png": "/sarah-stewart/static/media/The_Yellow_Umbrella.c62c726e1a8af7ffac74.png",
+    "static/media/Cotton_Field_png.png": "/sarah-stewart/static/media/Cotton_Field_png.6a959f1bbc678b299811.png",
+    "static/media/Citrus_by_the_Sea.png": "/sarah-stewart/static/media/Citrus_by_the_Sea.926d88e559bbccb90948.png",
+    "static/media/Tropicale.png": "/sarah-stewart/static/media/Tropicale.20e619b0d90b1c36ecfe.png",
+    "static/media/Azul.png": "/sarah-stewart/static/media/Azul.9f6718cdd43f616878e5.png",
+    "static/media/Western_Lake.png": "/sarah-stewart/static/media/Western_Lake.e8647977086cd4254ab4.png",
+    "static/media/Night_Swimming.png": "/sarah-stewart/static/media/Night_Swimming.3ef184cf8e0fa8c59984.png",
+    "static/media/Everglades_Sunrise.png": "/sarah-stewart/static/media/Everglades_Sunrise.696f6625d7c6a1135e32.png",
+    "static/media/SeaTurtleinWhite.png": "/sarah-stewart/static/media/SeaTurtleinWhite.7238570549c6f42be0d4.png",
+    "static/media/logo.png": "/sarah-stewart/static/media/logo.2902e4498f5a972a4ae6.png",
+    "index.html": "/sarah-stewart/index.html",
+    "main.84733f78.css.map": "/sarah-stewart/static/css/main.84733f78.css.map",
+    "main.337f8753.js.map": "/sarah-stewart/static/js/main.337f8753.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84733f78.css",
+    "static/js/main.337f8753.js"
+  ]
+}
