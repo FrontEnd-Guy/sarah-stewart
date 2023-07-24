@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sarah-stewart/static/css/main.84733f78.css",
-    "main.js": "/sarah-stewart/static/js/main.337f8753.js",
+    "main.css": "/sarah-stewart/static/css/main.2fa0e323.css",
+    "main.js": "/sarah-stewart/static/js/main.eeca300a.js",
     "static/media/slide02.png": "/sarah-stewart/static/media/slide02.679466a3ed172c9192b4.png",
     "static/media/slide03.png": "/sarah-stewart/static/media/slide03.62fa729e1b277beae0b5.png",
     "static/media/slide01.png": "/sarah-stewart/static/media/slide01.953685c4e9d6f0f8edea.png",
@@ -32,11 +32,11 @@
     "static/media/SeaTurtleinWhite.png": "/sarah-stewart/static/media/SeaTurtleinWhite.7238570549c6f42be0d4.png",
     "static/media/logo.png": "/sarah-stewart/static/media/logo.2902e4498f5a972a4ae6.png",
     "index.html": "/sarah-stewart/index.html",
-    "main.84733f78.css.map": "/sarah-stewart/static/css/main.84733f78.css.map",
-    "main.337f8753.js.map": "/sarah-stewart/static/js/main.337f8753.js.map"
+    "main.2fa0e323.css.map": "/sarah-stewart/static/css/main.2fa0e323.css.map",
+    "main.eeca300a.js.map": "/sarah-stewart/static/js/main.eeca300a.js.map"
   },
   "entrypoints": [
-    "static/css/main.84733f78.css",
-    "static/js/main.337f8753.js"
+    "static/css/main.2fa0e323.css",
+    "static/js/main.eeca300a.js"
   ]
 }
