@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sarah-stewart/static/css/main.2fa0e323.css",
-    "main.js": "/sarah-stewart/static/js/main.b93b1d5d.js",
+    "main.js": "/sarah-stewart/static/js/main.30aea35c.js",
     "static/media/BeachAerial.png": "/sarah-stewart/static/media/BeachAerial.1ff8deb07cfa7efd5df3.png",
     "static/media/slide07.png": "/sarah-stewart/static/media/slide07.855f5c1fa6e5097071f9.png",
     "static/media/slide03.png": "/sarah-stewart/static/media/slide03.24b3d5b8f8d54690f3f2.png",
@@ -33,10 +33,10 @@
     "static/media/logo.png": "/sarah-stewart/static/media/logo.df40c1d0a6941bd827b0.png",
     "index.html": "/sarah-stewart/index.html",
     "main.2fa0e323.css.map": "/sarah-stewart/static/css/main.2fa0e323.css.map",
-    "main.b93b1d5d.js.map": "/sarah-stewart/static/js/main.b93b1d5d.js.map"
+    "main.30aea35c.js.map": "/sarah-stewart/static/js/main.30aea35c.js.map"
   },
   "entrypoints": [
     "static/css/main.2fa0e323.css",
-    "static/js/main.b93b1d5d.js"
+    "static/js/main.30aea35c.js"
   ]
 }
