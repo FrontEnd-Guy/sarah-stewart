@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import {HiMenuAlt4, HiX} from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
@@ -7,8 +7,31 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  let navbarClasses = ['app__navbar'];
+  if (scrolled) {
+    navbarClasses.push('scrolled');
+  }
+
   return (
-    <nav className='app__navbar'>
+    <nav className={navbarClasses.join(" ")}>
       <div className='app__navbar-logo'>
         <img src={images.logo} alt='logo' />
       </div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import './Projects.scss';
 import { images } from '../../constants';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 
 const projects =[
@@ -53,4 +53,8 @@ const Projects = () => {
   )
 }
 
-export default AppWrap(Projects, 'projects')
+export default AppWrap(
+  MotionWrap(Projects, 'app__projects'),
+   'projects',
+   'app__whitebg'
+  );

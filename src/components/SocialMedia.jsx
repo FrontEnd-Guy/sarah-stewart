@@ -7,13 +7,13 @@ const SocialMedia = () => {
   return (
     <div className='app__social'>
         <div>
-            <TfiEmail />
+            <TfiEmail onClick={() => window.location.href = '#contact'}/>
         </div>
         <div>
-            <FaFacebookF />
+            <FaFacebookF onClick={() => window.open('https://www.facebook.com/SarahStewartFineArt', '_blank')}/>
         </div>
         <div>
-            <BsInstagram />
+            <BsInstagram onClick={() => window.open('https://www.instagram.com/sarahstewartfineart/', '_blank')}/>
         </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { AiFillEye } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 
 import './Portfolio.scss';
 
@@ -82,7 +82,7 @@ const Portfolio = ({onCardClick}) => {
                   <h4 className='bold-text'>{work.title}</h4>
                   <p className='p-text' style={{marginTop: 10}}>{work.description}</p>
                   <div className='app__work-tag app__flex'>
-                    <p className='p-text'>{work.tag}</p>
+                    <p className='p-text' style={{margin: 0}}>{work.tag}</p>
                   </div>
                 </div>
               </div>)
@@ -92,4 +92,7 @@ const Portfolio = ({onCardClick}) => {
   )
 }
 
-export default AppWrap(Portfolio, 'portfolio')
+export default AppWrap(
+  MotionWrap(Portfolio, 'app__works'), 
+  'portfolio'
+);

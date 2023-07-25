@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+
+import { images } from '../../constants';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 import './Footer.scss';
 
