@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/sarah-stewart/static/css/main.861ee1e4.css",
-    "main.js": "/sarah-stewart/static/js/main.1cc7f0fc.js",
+    "main.css": "/sarah-stewart/static/css/main.d79384e4.css",
+    "main.js": "/sarah-stewart/static/js/main.9db9f2c5.js",
+    "static/media/slide01.png": "/sarah-stewart/static/media/slide01.95ec173c2d49edbdec89.png",
     "static/media/BeachAerial.png": "/sarah-stewart/static/media/BeachAerial.1ff8deb07cfa7efd5df3.png",
     "static/media/slide07.png": "/sarah-stewart/static/media/slide07.855f5c1fa6e5097071f9.png",
     "static/media/slide03.png": "/sarah-stewart/static/media/slide03.24b3d5b8f8d54690f3f2.png",
@@ -11,7 +12,6 @@
     "static/media/slide06.png": "/sarah-stewart/static/media/slide06.e7d6c818685f3bb356b4.png",
     "static/media/slide09.png": "/sarah-stewart/static/media/slide09.3bafb639d21f70bc1940.png",
     "static/media/slide10.png": "/sarah-stewart/static/media/slide10.e7f11750e6ecca81c04e.png",
-    "static/media/slide01.png": "/sarah-stewart/static/media/slide01.54c03752847e791f1b24.png",
     "static/media/slide05.png": "/sarah-stewart/static/media/slide05.54254284d6cb19e96c55.png",
     "static/media/slide02.png": "/sarah-stewart/static/media/slide02.88f63c89d7b47b564669.png",
     "static/media/about.jpg": "/sarah-stewart/static/media/about.cbb2156871828e0eb32d.jpg",
@@ -29,16 +29,17 @@
     "static/media/Azul.png": "/sarah-stewart/static/media/Azul.a8a24c5ba1d36330ba65.png",
     "static/media/Western_Lake.png": "/sarah-stewart/static/media/Western_Lake.38dbe6db4d63563b7569.png",
     "static/media/Night_Swimming.png": "/sarah-stewart/static/media/Night_Swimming.1f50f0958a19a97cba1e.png",
+    "static/media/arlo.jpeg": "/sarah-stewart/static/media/arlo.6c38ad8d0fac785fb2eb.jpeg",
     "static/media/Everglades_Sunrise.png": "/sarah-stewart/static/media/Everglades_Sunrise.937829458ca0ae4e8bf5.png",
     "static/media/logo.png": "/sarah-stewart/static/media/logo.df40c1d0a6941bd827b0.png",
     "static/media/mobile.png": "/sarah-stewart/static/media/mobile.145d9ce0157a56f8fcd8.png",
     "static/media/email.png": "/sarah-stewart/static/media/email.37b9e890eea501421fbf.png",
     "index.html": "/sarah-stewart/index.html",
-    "main.861ee1e4.css.map": "/sarah-stewart/static/css/main.861ee1e4.css.map",
-    "main.1cc7f0fc.js.map": "/sarah-stewart/static/js/main.1cc7f0fc.js.map"
+    "main.d79384e4.css.map": "/sarah-stewart/static/css/main.d79384e4.css.map",
+    "main.9db9f2c5.js.map": "/sarah-stewart/static/js/main.9db9f2c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.861ee1e4.css",
-    "static/js/main.1cc7f0fc.js"
+    "static/css/main.d79384e4.css",
+    "static/js/main.9db9f2c5.js"
   ]
 }
