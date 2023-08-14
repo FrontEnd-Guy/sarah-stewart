@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header id='home' className='header'>
-      <CarouselElement />
+      <CarouselElement className='header__slideshow'/>
       <motion.div 
         className='header__caption-container'
         style={{ opacity }}

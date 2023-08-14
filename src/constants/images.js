@@ -21,6 +21,7 @@ import about from '../assets/about.jpg';
 import project01 from '../assets/project01.jpg';
 import project02 from '../assets/project02.jpg';
 import project03 from '../assets/project03.jpg';
+import arlo from '../assets/arlo.jpeg';
 
 //Available Works
 import azul from '../assets/Azul.png';
@@ -39,6 +40,10 @@ import tropicale from '../assets/Tropicale.png';
 import water_lillies from '../assets/WaterLillies.png';
 import western_lake from '../assets/Western_Lake.png';
 
+//Contact
+import email from '../assets/email.png';
+import mobile from '../assets/mobile.png'
+
 const images = {
     logo,
     slide01,
@@ -56,6 +61,7 @@ const images = {
     project01,
     project02,
     project03,
+    arlo,
     azul,
     cotton_field,
     everglades_sunrise,
@@ -68,7 +74,9 @@ const images = {
     sea_turtle_in_white,
     tropicale,
     water_lillies,
-    western_lake
+    western_lake,
+    email,
+    mobile
 }
 
 export default images

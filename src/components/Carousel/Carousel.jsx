@@ -1,38 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { client, urlFor } from '../../client';
 
-import { images } from '../../constants';
 import './Carousel.scss';
 
 const CarouselElement = () => {
-    const carousel = [
-        images.slide01,
-        images.slide02,        
-        images.slide03,
-        images.slide04,
-        images.slide05,
-        images.slide06,
-        images.slide07,
-        images.slide08,
-        images.slide09,
-        images.slide10,
-        images.slide11,
-    ]
+    const [images, setImages] = useState([]);
+
+      // Функция для загрузки изображений на основе ориентации экрана
+  const fetchImages = () => {
+    const isLandscape = window.innerWidth > window.innerHeight;
+    const queryType = isLandscape ? "horizontalSlideshow" : "verticalSlideshow";
+    
+    client.fetch(`*[_type == "${queryType}"] | order(order asc) {
+        title,
+        image
+     }`).then(data => {
+      setImages(data);
+    }).catch(console.error);
+  };
+
+  useEffect(() => {
+    fetchImages();
+    
+    // Добавить обработчик события изменения размера
+    window.addEventListener('resize', fetchImages);
+    
+    // Удалить обработчик при размонтировании компонента
+    return () => window.removeEventListener('resize', fetchImages);
+  }, []);
+    
     return (
         <Carousel
             indicators={false}
             interval={4000}
             pause={false}
         >
-            {carousel.map((item) => {
+            {images.map((item) => {
                 return(
                     <Carousel.Item 
-                        key={`carousel-${item}`}
+                        key={`carousel-${item.title}`}
                     >   
                         <img
                             className='carousel-item__image'
-                            src={item}
-                            alt={item}
+                            src={urlFor(item.image)}
+                            alt={item.title}
                         />
                     </Carousel.Item>
                 )

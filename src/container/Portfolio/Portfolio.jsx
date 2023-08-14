@@ -1,24 +1,63 @@
 import React, { useState, useEffect} from 'react';
-import { AiFillEye } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper'
 
 import './Portfolio.scss';
 
-import { works as data } from '../../constants/works';
+import { urlFor, client } from '../../client';
+
+// import { works as data } from '../../constants/works';
+import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 const Portfolio = ({onCardClick}) => {
-
   const [ activeFilter, setActiveFilter ] = useState('All');
   const [ animateCard, setAnimateCard ] = useState({y: 0, opacity: 1});
   const [ works, setWorks ] = useState([]);
-  const [filterWork, setfilterWork] = useState([])
+  const [filterWork, setfilterWork] = useState([]);
+  const [worksPerPage, setWorksPerPage] = useState(0);
+  const [addWorks, setAddWorks] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const settings = [
+    { width: 1280, worksPerPage: 12, addWorks: 4 },
+    { width: 990, worksPerPage: 9, addWorks: 3 },
+    { width: 768, worksPerPage: 6, addWorks: 2 },
+    { width: 320, worksPerPage: 4, addWorks: 1 }
+  ];
+
+  const windowDimensions = useWindowDimensions();
 
   useEffect(() => {
-    setWorks(data);
-    setfilterWork(data);
-  }, [data])
+    const query = `*[_type == "works"]`;
+
+    client.fetch(query)
+      .then((data) => {
+        setWorks(data);
+        setfilterWork(data);
+      })
+      .catch(error => console.log(error))
+  }, [])
+
+  useEffect(() => {
+    const currentSetting = settings.find(
+      (setting) => windowDimensions >= setting.width
+    ) || settings[0];
+    setWorksPerPage(currentSetting.worksPerPage);
+    setAddWorks(currentSetting.addWorks);
+  }, [windowDimensions]);
+
+  const indexOfLastMovie = currentPage * worksPerPage;
+  const currentWorks = filterWork.slice(0, indexOfLastMovie);
+
+  const handleLoadMore = () => {
+    setAnimateCard({y:-100, opacity:0});
+
+    setTimeout(() => {
+      setAnimateCard({y:0, opacity: 1});
+      setCurrentPage(currentPage + addWorks/worksPerPage);
+    }, 500)
+  };
 
   const handlePortfolioFilter = (item) => {
     setActiveFilter(item);
@@ -30,14 +69,14 @@ const Portfolio = ({onCardClick}) => {
       if(item === 'All') {
         setfilterWork(works);
       } else {
-        setfilterWork(works.filter((work) => work.tag === item))
+        setfilterWork(works.filter((work) => work.status === item.toLowerCase()))
       }
-    })
+    }, 500)
   }
 
   return (
     <>
-      <h2 className='head-text'>Portfolio</h2>
+      <h2 className='head-text'>Sarah's Gallery</h2>
       <div className='app__works-filter'>
         {['All', 'Available', 'Sold'].map((item, index) => {
           return (
@@ -54,45 +93,37 @@ const Portfolio = ({onCardClick}) => {
         animate={animateCard}
         transition={{opacity: 0.5, delayChildren: 0.5}}
         className='app__work-portfolio'>
-          { filterWork.map((work, index) => 
+          { currentWorks.map((work, index) => 
             ( <div className='app__work-item app-flex' key={index}>
                 <div className='app__work-img app-flex'>
-                <img 
-                  src={work.img} 
-                  alt={work.title} 
-                />
-                  <motion.div 
-                    whileHover={{opacity: [0,1]}}
-                    transition={{duration: 0.25, ease: 'easeInOut', staggerChildren: 0.25}}
-                    className="app__work-hover app__flex"
-                    onClick={() => { 
-                      console.log('Hover layer clicked'); 
-                      onCardClick(work);}}
-                  >
-                    <motion.div
-                      whileHInView={{scale: [1, 0.9]}}
-                      transition={{duration: 0.25}}
-                      className="app__flex"
-                    >
-                      <AiFillEye />
-                    </motion.div>
-                  </motion.div>
+                {work && <img 
+                  src={urlFor(work.imgUrl)} 
+                  alt={work.title}
+                  onClick={() => { 
+                    onCardClick(work);}} 
+                />}
                 </div>
                 <div className='app__work-content app__flex'>
                   <h4 className='bold-text'>{work.title}</h4>
                   <p className='p-text' style={{marginTop: 10}}>{work.description}</p>
                   <div className='app__work-tag app__flex'>
-                    <p className='p-text' style={{margin: 0}}>{work.tag}</p>
+                    <p className='p-text' style={{margin: 0}}>{work.status}</p>
                   </div>
                 </div>
               </div>)
           )}
       </motion.div>
+      {currentWorks.length < filterWork.length && (
+        <button className='app__works-more app__flex' onClick={handleLoadMore}>
+          More
+        </button>
+      )}
     </>
   )
 }
 
 export default AppWrap(
   MotionWrap(Portfolio, 'app__works'), 
-  'portfolio'
+  'portfolio',
+  'app__primarybg'
 );

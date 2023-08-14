@@ -1,20 +1,21 @@
-.author {
-    max-width: 1200px;
-    margin: 0 auto;
+.app__about {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
 }
 
-.author-info {
+.app__about-info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 2rem;
+    gap: 2rem;
 
-    .author-photo {
+    .app__about-photo {
+        flex: 0 0 auto;
         width: 270px;
         height: 327px;
         overflow: hidden;
-        margin-right: 2rem;
         border-radius: 10px;
 
         img {
@@ -23,39 +24,26 @@
             object-fit: cover;
             object-position: center;
         }
+
+        @media screen and (min-width: 2000px) {
+            width: 600px;
+            height: auto;
+            margin: 4rem;
+        }
     }
 
-    .author-bio {
+    .app__about-bio {
+        margin: 2rem 1rem;
         max-width: 600px;
-        margin: 2rem;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .author-info {
+        @media screen and (min-width: 2000px) {
+            max-width: 1200px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
         flex-direction: column;
-        text-align: center;
-
-        .author-photo {
-            margin-right: 0;
-            margin-bottom: 2rem;
-        }
-
-        .author-bio {
-            h3, p {
-                text-align: left;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .author-photo {
-        width: 370px;
-        margin: 4rem;
-
-        img{
-            height: 320px;
-        }
+        justify-content: center;
+        align-items: center;
     }
 }

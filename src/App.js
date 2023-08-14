@@ -11,7 +11,6 @@ const App = () => {
   const [selectedCard, setSelectedCard] = useState(null)
 
   function handleCardClick(card) {
-    console.log(card);
     setSelectedCard(card);
     setIsImagePopupOpen(true);
   }

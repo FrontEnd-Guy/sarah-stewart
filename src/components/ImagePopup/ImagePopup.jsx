@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { HiX } from 'react-icons/hi';
+import { urlFor } from "../../client";
 
 import './ImagePopup.scss';
 
@@ -30,7 +31,7 @@ export function ImagePopup({ isOpen, card, onClose }) {
       onClick={closeOnOverlayClick}
     >
       <figure className="popup__figure">
-        <img className="popup__image" src={card?.img} alt={card?.title} />
+        {card && <img className="popup__image" src={urlFor(card.imgUrl)} alt={card?.title} />}
         <figcaption className="p-text popup__figcaption">{card?.title}</figcaption>
         <HiX 
             onClick={onClose}
