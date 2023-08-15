@@ -4,10 +4,10 @@ import { client, urlFor } from '../../client';
 
 import './Carousel.scss';
 
-const CarouselElement = () => {
+const CarouselElement = (props) => {
     const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true); 
 
-      // Функция для загрузки изображений на основе ориентации экрана
   const fetchImages = () => {
     const isLandscape = window.innerWidth > window.innerHeight;
     const queryType = isLandscape ? "horizontalSlideshow" : "verticalSlideshow";
@@ -17,40 +17,53 @@ const CarouselElement = () => {
         image
      }`).then(data => {
       setImages(data);
-    }).catch(console.error);
+      setLoading(false);  // Устанавливаем состояние загрузки в false после успешной загрузки данных
+    }).catch(error => {
+      console.error(error);
+      setLoading(false);  // Даже если произошла ошибка, нам следует установить состояние загрузки в false
+    });
   };
 
   useEffect(() => {
     fetchImages();
     
-    // Добавить обработчик события изменения размера
     window.addEventListener('resize', fetchImages);
     
-    // Удалить обработчик при размонтировании компонента
     return () => window.removeEventListener('resize', fetchImages);
   }, []);
-    
+
+  if (loading) {
     return (
-        <Carousel
-            indicators={false}
-            interval={4000}
-            pause={false}
-        >
-            {images.map((item) => {
-                return(
-                    <Carousel.Item 
-                        key={`carousel-${item.title}`}
-                    >   
-                        <img
-                            className='carousel-item__image'
-                            src={urlFor(item.image)}
-                            alt={item.title}
-                        />
-                    </Carousel.Item>
-                )
-            })}
-        </Carousel>
+        <div className='loading-indicator'>
+            <span className="dot" style={{ "--i": 1 }}></span>
+            <span className="dot" style={{ "--i": 2 }}></span>
+            <span className="dot" style={{ "--i": 3 }}></span>
+        </div>
     );
+}
+    
+  return (
+    <Carousel
+        indicators={false}
+        interval={4000}
+        pause={false}
+        {...props}
+    >
+        {images.map((item) => {
+            return(
+                <Carousel.Item 
+                    key={`carousel-${item.title}`}
+                >   
+                    <img
+                        className='carousel-item__image'
+                        src={urlFor(item.image)}
+                        alt={item.title}
+                    />
+                </Carousel.Item>
+            )
+        })}
+    </Carousel>
+  );
 }
 
 export default CarouselElement;

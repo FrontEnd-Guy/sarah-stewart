@@ -1,3 +1,40 @@
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .dot {
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      margin: 0 2.5px;
+  
+      animation: bounce 1s infinite;
+      animation-delay: calc(0.2s * var(--i));
+    }
+  }
+  
+
+.loading-indicator {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carousel-item {
     height: 100vh;
     overflow: hidden;  
