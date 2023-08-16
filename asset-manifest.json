@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sarah-stewart/static/css/main.c7dc56dc.css",
-    "main.js": "/sarah-stewart/static/js/main.ee53ff90.js",
+    "main.css": "/sarah-stewart/static/css/main.1a7af249.css",
+    "main.js": "/sarah-stewart/static/js/main.02395042.js",
     "static/js/726.e1b13c5d.chunk.js": "/sarah-stewart/static/js/726.e1b13c5d.chunk.js",
     "static/media/slide01.png": "/sarah-stewart/static/media/slide01.95ec173c2d49edbdec89.png",
     "static/media/BeachAerial.png": "/sarah-stewart/static/media/BeachAerial.1ff8deb07cfa7efd5df3.png",
@@ -36,12 +36,12 @@
     "static/media/mobile.png": "/sarah-stewart/static/media/mobile.145d9ce0157a56f8fcd8.png",
     "static/media/email.png": "/sarah-stewart/static/media/email.37b9e890eea501421fbf.png",
     "index.html": "/sarah-stewart/index.html",
-    "main.c7dc56dc.css.map": "/sarah-stewart/static/css/main.c7dc56dc.css.map",
-    "main.ee53ff90.js.map": "/sarah-stewart/static/js/main.ee53ff90.js.map",
+    "main.1a7af249.css.map": "/sarah-stewart/static/css/main.1a7af249.css.map",
+    "main.02395042.js.map": "/sarah-stewart/static/js/main.02395042.js.map",
     "726.e1b13c5d.chunk.js.map": "/sarah-stewart/static/js/726.e1b13c5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7dc56dc.css",
-    "static/js/main.ee53ff90.js"
+    "static/css/main.1a7af249.css",
+    "static/js/main.02395042.js"
   ]
 }
