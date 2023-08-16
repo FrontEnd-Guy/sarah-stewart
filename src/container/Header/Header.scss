@@ -1,80 +1,79 @@
-.header{
-    flex: 1;
-    width: 100%;
+.header {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--white-color);
+
+  &__caption-container {
+    z-index: 0;
+    padding: 3rem 15%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
     flex-direction: column;
-    position: relative;
-    background-color: var(--white-color);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7px;
+    width: 100%;
+    color: white;
 
-    &__caption-container{
-        z-index: 0;
-        padding: 3rem 15%;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 7px;
-        width: 100%;
-        color: white;
+    h1 {
+      color: var(--white-color);
+      text-align: left;
+      max-width: 400px;
 
-        h1 {
-            color: var(--white-color);
-            text-align: left;
-            max-width: 400px;
-
-            @media screen and (min-width:2000px) {
-                max-width: 600px;
-            }
-        }
+      @media screen and (min-width: 2000px) {
+        max-width: 600px;
+      }
     }
-    
-    &__buttons{
-        display: flex;
-        gap: 9px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 9px;
+  }
+
+  &__caption-button {
+    color: var(--white-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0 0.7rem;
+
+    height: 40px;
+
+    background-color: transparent;
+    border-radius: 2em;
+    box-sizing: border-box;
+    border: 2px solid var(--white-color);
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      background-color: var(--white-color);
+      color: var(--gray-color);
     }
+  }
 
-    &__caption-button{
-        color: var(--white-color);
-        text-transform: uppercase;
-        text-decoration:none;
-        font-size: 1rem;
-        font-weight: 800;
-        line-height: 1.5;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        margin: 0;
-        padding: 0 .7rem;
-        
+  &__caption-button_social {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
 
-        height: 40px;
-
-        background-color: transparent;
-        border-radius:2em;
-        box-sizing: border-box;
-        border: 2px solid var(--white-color);
-
-        transition: all .4s ease-in-out;
-    
-        &:hover{
-            background-color: var(--white-color);
-            color: var(--gray-color);
-        }
+    svg {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+      object-position: center;
     }
-
-    &__caption-button_social{
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        margin: 0;
-
-        svg{
-            width: 70%;
-            height: 70%;
-            object-fit: cover;
-            object-position: center;
-        }
-    }
+  }
 }

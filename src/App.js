@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 
-import { About, Projects, Footer, Header, Testimonial, Portfolio } from './container';
+import {
+  About,
+  Projects,
+  Footer,
+  Header,
+  Testimonial,
+  Portfolio,
+} from './container';
 
 import './App.scss';
 import { Navbar } from './components';
@@ -8,7 +15,7 @@ import { ImagePopup } from './components/ImagePopup/ImagePopup';
 
 const App = () => {
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
-  const [selectedCard, setSelectedCard] = useState(null)
+  const [selectedCard, setSelectedCard] = useState(null);
 
   function handleCardClick(card) {
     setSelectedCard(card);
@@ -21,23 +28,21 @@ const App = () => {
   }
 
   return (
-    <div className='app'>
+    <div className="app">
       <Navbar />
       <Header />
       <About />
       <Projects />
-      <Portfolio 
-        onCardClick={handleCardClick}
-      />
+      <Portfolio onCardClick={handleCardClick} />
       <Testimonial />
       <Footer />
-      <ImagePopup 
+      <ImagePopup
         card={selectedCard}
         onClose={handleClosePopup}
         isOpen={isImagePopupOpen}
       />
     </div>
   );
-}
+};
 
 export default App;
