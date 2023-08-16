@@ -18,23 +18,21 @@ const Header = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.03, 0.07], [1, 0.8, 0]);
 
   const handleCarouselClick = () => {
-      setIsVisible(false); // Сделать motion.div невидимым
+      setIsVisible(false);
 
-      // Отменить текущий таймер (если он запущен)
       if (timerId) {
           clearTimeout(timerId);
       }
 
-      // Начать новый таймер
       const newTimerId = setTimeout(() => {
-          setIsVisible(true); // Показать motion.div снова после 2 секунды
+          setIsVisible(true);
       }, 2000);
 
-      setTimerId(newTimerId); // Сохранить идентификатор таймера
+      setTimerId(newTimerId);
   };
 
   useEffect(() => {
-      // Убедитесь, что таймер очищен при размонтировании компонента
+
       return () => {
           if (timerId) {
               clearTimeout(timerId);
