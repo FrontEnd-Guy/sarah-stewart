@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaFacebookF, FaInstagram} from 'react-icons/fa';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
 import './Header.scss';
 import { CarouselElement } from '../../components';
@@ -11,23 +11,52 @@ const captionVariants = {
 };
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [timerId, setTimerId] = useState(null);
   
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.03, 0.07], [1, 0.8, 0]);
 
+  const handleCarouselClick = () => {
+      setIsVisible(false); // Сделать motion.div невидимым
+
+      // Отменить текущий таймер (если он запущен)
+      if (timerId) {
+          clearTimeout(timerId);
+      }
+
+      // Начать новый таймер
+      const newTimerId = setTimeout(() => {
+          setIsVisible(true); // Показать motion.div снова после 2 секунды
+      }, 2000);
+
+      setTimerId(newTimerId); // Сохранить идентификатор таймера
+  };
+
+  useEffect(() => {
+      // Убедитесь, что таймер очищен при размонтировании компонента
+      return () => {
+          if (timerId) {
+              clearTimeout(timerId);
+          }
+      };
+  }, [timerId]);
+
   return (
       <header id='home' className='header'>
-          <CarouselElement className='header__slideshow'/>
-          <motion.div 
+          <CarouselElement className='header__slideshow' onClick={handleCarouselClick}/>
+          <AnimatePresence>
+          {isVisible && <motion.div 
               className='header__caption-container'
               variants={captionVariants}
               initial="hidden"
               animate="visible"
+              exit={{ opacity: 0, y: 50, transition: { duration: 1 } }}
               transition={{ delay: 0.5, duration: 1.5, ease: [0.6, -0.05, 0.01, 0.99] }}
               style={{ opacity }}
           >
-            <h1 className='head-text' style={{color: "#fff", maxWidth: "400px", textAlign: "left"}}>
-              Fine bas relief plaster paintings
+            <h1 className='head-text'>
+              Fine Bas Relief Plaster Paintings
             </h1>
             <p className='p-text'style={{color: "#fff"}}>
               Commisions available<br/>
@@ -57,8 +86,9 @@ const Header = () => {
                        onClick={() => window.open('https://www.instagram.com/sarahstewartfineart/', '_blank')}>
                          <FaInstagram/>
                    </motion.button>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>}
+          </AnimatePresence>
         </header>
       )
     }

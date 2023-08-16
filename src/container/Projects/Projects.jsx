@@ -7,30 +7,6 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { useState } from 'react';
 import { urlFor, client } from '../../client';
 
-
-// const projects =[
-//   {
-//     title: "Plaster Paintings",
-//     desctiption: "Capturing the subtleties of emotions and landscapes, Sarah's Plaster Paintings blend texture and color into evocative, immersive art pieces.",
-//     imageUrl: images.project01
-//   },
-//   {
-//     title: "Sarah's Reef",
-//     desctiption: "Painting on sea shelves, Sarah's Reef project transforms nature's beauty into uniquely textured, maritime-themed masterpieces.",
-//     imageUrl: images.project02
-//   },
-//   {
-//     title: "Poetry Book",
-//     desctiption: "Sarah's poetry book intertwines vivid imagery and deep sentiment, weaving a literary tapestry that tugs at the heartstrings of it's readers.",
-//     imageUrl: images.project03
-//   },
-//   {
-//     title: "Arlo's Day on 30A",
-//     desctiption: "Bringing to life the joy and curiosity of childhood, 'Arlo's Day on 30A' is a children's book series that sparks imagination and adventure in it's young readers.",
-//     imageUrl: images.arlo
-//   }
-// ]
-
 const Projects = () => {
 
   const [projects, setProjects] = useState([]);
@@ -47,7 +23,7 @@ const Projects = () => {
 
   return (
     <>
-      <h2 className='head-text'>Embracing Art: From Plaster to Poetry</h2>
+      <h2 className='head-text'>From <span className='span-text'>Plaster</span> to <span className='span-text'>Poetry</span></h2>
       <div className='app__projects-container'>
         {projects.map((project, index) => (
          <motion.div

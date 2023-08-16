@@ -76,7 +76,7 @@ const Portfolio = ({onCardClick}) => {
 
   return (
     <>
-      <h2 className='head-text'>Sarah's Gallery</h2>
+      <h2 className='head-text'>Sarah's <span className='span-text'>Gallery</span></h2>
       <div className='app__works-filter'>
         {['All', 'Available', 'Sold'].map((item, index) => {
           return (

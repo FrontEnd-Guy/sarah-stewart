@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
-:root {
+/* :root {
   --font-base: "DM Sans", sans-serif;
 
   --primary-color: #edf2f8;
@@ -10,7 +10,20 @@
   --gray-color: #9c958a;
   --brown-color: #46364a;
   --white-color: #ffffff;
+} */
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+
+  --primary-color: #f5f7fa;      
+  --secondary-color: #317b8e;    
+  --black-color: #20232a;        
+  --lightGray-color: #e1e6eb;    
+  --gray-color: #adb5bd;        
+  --brown-color: #704c38;        
+  --white-color: #ffffff;        
 }
+
 
 * {
   box-sizing: border-box;

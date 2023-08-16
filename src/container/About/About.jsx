@@ -8,7 +8,7 @@ import { AppWrap, MotionWrap } from '../../wrapper'
 const About = () => {
   return (
         <>
-            <h2 className='head-text'>Meet the Artist</h2>
+            <h2 className='head-text'>Meet the <span className='span-text'>Artist</span></h2>
             <div className="app__about-info">
                 <div className='app__about-photo'>
                     <img src={images.about} alt="Sarah Stewart" />

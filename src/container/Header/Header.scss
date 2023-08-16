@@ -17,6 +17,16 @@
         gap: 7px;
         width: 100%;
         color: white;
+
+        h1 {
+            color: var(--white-color);
+            text-align: left;
+            max-width: 400px;
+
+            @media screen and (min-width:2000px) {
+                max-width: 600px;
+            }
+        }
     }
     
     &__buttons{
