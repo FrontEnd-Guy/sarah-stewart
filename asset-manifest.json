@@ -1,47 +1,19 @@
 {
   "files": {
     "main.css": "/sarah-stewart/static/css/main.2a384347.css",
-    "main.js": "/sarah-stewart/static/js/main.efc795fb.js",
-    "static/js/726.e1b13c5d.chunk.js": "/sarah-stewart/static/js/726.e1b13c5d.chunk.js",
-    "static/media/slide01.png": "/sarah-stewart/static/media/slide01.95ec173c2d49edbdec89.png",
-    "static/media/BeachAerial.png": "/sarah-stewart/static/media/BeachAerial.1ff8deb07cfa7efd5df3.png",
-    "static/media/slide07.png": "/sarah-stewart/static/media/slide07.855f5c1fa6e5097071f9.png",
-    "static/media/slide03.png": "/sarah-stewart/static/media/slide03.24b3d5b8f8d54690f3f2.png",
-    "static/media/slide04.png": "/sarah-stewart/static/media/slide04.a9ad855c84ddb46e01a1.png",
-    "static/media/slide08.png": "/sarah-stewart/static/media/slide08.60214767934b686f6455.png",
-    "static/media/slide11.png": "/sarah-stewart/static/media/slide11.ab38621554396df63f30.png",
-    "static/media/slide06.png": "/sarah-stewart/static/media/slide06.e7d6c818685f3bb356b4.png",
-    "static/media/slide09.png": "/sarah-stewart/static/media/slide09.3bafb639d21f70bc1940.png",
-    "static/media/slide10.png": "/sarah-stewart/static/media/slide10.e7f11750e6ecca81c04e.png",
-    "static/media/slide05.png": "/sarah-stewart/static/media/slide05.54254284d6cb19e96c55.png",
-    "static/media/slide02.png": "/sarah-stewart/static/media/slide02.88f63c89d7b47b564669.png",
+    "main.js": "/sarah-stewart/static/js/main.4c5a8344.js",
+    "static/js/726.acf4e829.chunk.js": "/sarah-stewart/static/js/726.acf4e829.chunk.js",
     "static/media/about.jpg": "/sarah-stewart/static/media/about.cbb2156871828e0eb32d.jpg",
-    "static/media/project01.jpg": "/sarah-stewart/static/media/project01.d3a62c7b7a4a58449069.jpg",
-    "static/media/project03.jpg": "/sarah-stewart/static/media/project03.597c5792d46f9e698a8d.jpg",
-    "static/media/project02.jpg": "/sarah-stewart/static/media/project02.25f0e7f776b81ea93e22.jpg",
-    "static/media/Fish_Fossil.png": "/sarah-stewart/static/media/Fish_Fossil.90ec2a1274acc4609f03.png",
-    "static/media/Magnolias.png": "/sarah-stewart/static/media/Magnolias.34872cc19324237c0648.png",
-    "static/media/WaterLillies.png": "/sarah-stewart/static/media/WaterLillies.65244f7719fa307752f9.png",
-    "static/media/The_Yellow_Umbrella.png": "/sarah-stewart/static/media/The_Yellow_Umbrella.218f5e790c73e9fae49a.png",
-    "static/media/Cotton_Field_png.png": "/sarah-stewart/static/media/Cotton_Field_png.63d75093c62ff9489047.png",
-    "static/media/Citrus_by_the_Sea.png": "/sarah-stewart/static/media/Citrus_by_the_Sea.f5d71b967db8b2f6ad5c.png",
-    "static/media/Tropicale.png": "/sarah-stewart/static/media/Tropicale.73aca8f4943bfd2ece03.png",
-    "static/media/SeaTurtleinWhite.png": "/sarah-stewart/static/media/SeaTurtleinWhite.98285914a222c0d8a026.png",
-    "static/media/Azul.png": "/sarah-stewart/static/media/Azul.a8a24c5ba1d36330ba65.png",
-    "static/media/Western_Lake.png": "/sarah-stewart/static/media/Western_Lake.38dbe6db4d63563b7569.png",
-    "static/media/Night_Swimming.png": "/sarah-stewart/static/media/Night_Swimming.1f50f0958a19a97cba1e.png",
-    "static/media/arlo.jpeg": "/sarah-stewart/static/media/arlo.6c38ad8d0fac785fb2eb.jpeg",
-    "static/media/Everglades_Sunrise.png": "/sarah-stewart/static/media/Everglades_Sunrise.937829458ca0ae4e8bf5.png",
     "static/media/logo.png": "/sarah-stewart/static/media/logo.df40c1d0a6941bd827b0.png",
     "static/media/mobile.png": "/sarah-stewart/static/media/mobile.145d9ce0157a56f8fcd8.png",
     "static/media/email.png": "/sarah-stewart/static/media/email.37b9e890eea501421fbf.png",
     "index.html": "/sarah-stewart/index.html",
     "main.2a384347.css.map": "/sarah-stewart/static/css/main.2a384347.css.map",
-    "main.efc795fb.js.map": "/sarah-stewart/static/js/main.efc795fb.js.map",
-    "726.e1b13c5d.chunk.js.map": "/sarah-stewart/static/js/726.e1b13c5d.chunk.js.map"
+    "main.4c5a8344.js.map": "/sarah-stewart/static/js/main.4c5a8344.js.map",
+    "726.acf4e829.chunk.js.map": "/sarah-stewart/static/js/726.acf4e829.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a384347.css",
-    "static/js/main.efc795fb.js"
+    "static/js/main.4c5a8344.js"
   ]
 }
