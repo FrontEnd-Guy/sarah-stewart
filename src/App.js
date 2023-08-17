@@ -32,8 +32,8 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
-      <Projects />
       <Portfolio onCardClick={handleCardClick} />
+      <Projects />
       <Testimonial />
       <Footer />
       <ImagePopup
