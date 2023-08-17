@@ -23,3 +23,10 @@ Welcome to the repository for Sarah Stewart's Portfolio website. As an accomplis
 ## 📬 Contact
 
 For more information or any queries, feel free to reach out!
+
+- **Email:** [trade93@gmail.com](mailto:trade93@gmail.com)
+- **Telegram:** [@pavelzakh](https://t.me/pavelzakh)
+
+## 🌍 Live Site
+
+[Sarah Stewart's Portfolio on GH pages](https://frontend-guy.github.io/sarah-stewart/)
