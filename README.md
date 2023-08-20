@@ -20,13 +20,10 @@ Welcome to the repository for Sarah Stewart's Portfolio website. As an accomplis
 - **Contact Form:** EmailJS
 - **Mapping:** Leaflet.js
 
-## 📬 Contact
-
-For more information or any queries, feel free to reach out!
-
-- **Email:** [trade93@gmail.com](mailto:trade93@gmail.com)
-- **Telegram:** [@pavelzakh](https://t.me/pavelzakh)
-
 ## 🌍 Live Site
 
 [Sarah Stewart's Portfolio on GH pages](https://frontend-guy.github.io/sarah-stewart/)
+
+## 📬 Contact
+
+For questions, feedback, or any issues related to the project, please reach out or raise an issue on GitHub.
