@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://FrontEnd-Guy.github.io/sarah-stewart",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@babel/preset-env": "^7.20.2",
