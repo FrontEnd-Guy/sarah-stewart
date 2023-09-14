@@ -20,9 +20,47 @@ Welcome to the repository for Sarah Stewart's Portfolio website. As an accomplis
 - **Contact Form:** EmailJS
 - **Mapping:** Leaflet.js
 
+## 🚀 Getting Started
+
+Follow the steps below to set up the project on your local machine:
+
+1. **Clone the repository**:
+```
+git clone https://github.com/FrontEnd-Guy/sarah-stewart.git
+```
+3. **Navigate to the project directory**:
+```
+cd sarah-stewart
+```
+3. **Install the required dependencies**:
+```
+npm install
+```
+4. **Start the development server**:
+```
+npm start
+```
+You should now have the app running in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## 🔧 System Requirements
+
+- **Node.js**: Ensure you have Node.js installed (preferably version 14 or newer). If not, [download and install it](https://nodejs.org/).
+- **Browsers**: The site is compatible with most modern browsers. For detailed compatibility, refer to the `browserslist` in the package.json.
+- **Backend Integration**: Ensure you have the required credentials to connect to the `Sanity.io` backend.
+- **Additional Dependencies**: Here are the core dependencies you'll need:
+- React.js
+- Bootstrap
+- Framer Motion
+- Sanity.io (Client & Image URL)
+- EmailJS
+- Leaflet.js
+
+(Note: For a complete list of dependencies and versions, refer to the provided `package.json`.)
+
 ## 🌍 Live Site
 
-[Sarah Stewart's Portfolio on GH pages](https://frontend-guy.github.io/sarah-stewart/)
+- [sarahstewartfineart.com](https://www.sarahstewartfineart.com)
+- [GH pages](https://frontend-guy.github.io/sarah-stewart/)
 
 ## 📬 Contact
 
