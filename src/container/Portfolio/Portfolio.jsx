@@ -7,7 +7,6 @@ import './Portfolio.scss';
 
 import { urlFor, client } from '../../client';
 
-// import { works as data } from '../../constants/works';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 const Portfolio = ({ onCardClick }) => {
@@ -109,6 +108,7 @@ const Portfolio = ({ onCardClick }) => {
                 <img
                   src={urlFor(work.imgUrl)}
                   alt={work.title}
+                  loading="lazy"
                   onClick={() => {
                     onCardClick(work);
                   }}

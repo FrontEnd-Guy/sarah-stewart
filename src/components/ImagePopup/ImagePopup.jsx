@@ -35,6 +35,7 @@ export function ImagePopup({ isOpen, card, onClose }) {
             className="popup__image"
             src={urlFor(card.imgUrl)}
             alt={card?.title}
+            loading="lazy"
           />
         )}
         <figcaption className="p-text popup__figcaption">
