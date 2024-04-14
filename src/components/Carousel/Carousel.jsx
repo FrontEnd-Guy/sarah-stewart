@@ -3,7 +3,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import { client, urlFor } from '../../client';
 import './Carousel.scss';
 
-// Simplified throttle function
 const throttle = (func, limit) => {
   let inThrottle;
   return function () {
@@ -81,6 +80,7 @@ const CarouselElement = React.memo((props) => {
             className="carousel-item__image"
             src={urlFor(item.image)}
             alt={item.title}
+            loading="eager"
           />
         </Carousel.Item>
       ))}
