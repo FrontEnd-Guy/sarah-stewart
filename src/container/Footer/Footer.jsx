@@ -1,36 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
-
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-
 import './Footer.scss';
-
-import L from 'leaflet';
-
-const BouncingMarker = ({ position }) => {
-  return (
-    <Marker
-      position={position}
-      icon={
-        new L.DivIcon({
-          className: 'bouncing-marker',
-          html: `<img src="${require('leaflet/dist/images/marker-icon.png')}" alt="marker" />`,
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-        })
-      }
-    >
-      <Popup>
-        For plaster work, Sarah’s Reef seashells and painted paper cards visit
-        The Studio Gallery in Grayton Beach
-      </Popup>
-    </Marker>
-  );
-};
+import BouncingMarker from '../../components/BouncingMarker';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -81,7 +56,6 @@ const Footer = () => {
         Reach the <span className="span-text">Heart</span> of{' '}
         <span className="span-text">Emerald</span> Art
       </h2>
-
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
@@ -91,12 +65,11 @@ const Footer = () => {
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="mobile" />
-          <a href="tel: +1 (850) 525-4800" className="p-text">
+          <a href="tel:+18505254800" className="p-text">
             (850) 525-4800
           </a>
         </div>
       </div>
-
       <div className="app__footer-container app__flex">
         <div className="form-container app__flex">
           {!isFormSubmitted ? (

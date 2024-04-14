@@ -1,22 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 export function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(window.innerWidth);
+  const [windowDimensions, setWindowDimensions] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : undefined
+  );
+
+  const handleResize = useCallback(() => {
+    clearTimeout(window.resizeTimeout);
+    window.resizeTimeout = setTimeout(() => {
+      setWindowDimensions(window.innerWidth);
+    }, 500);
+  }, []);
 
   useEffect(() => {
-    const resizeListener = () => {
-      clearTimeout(window.resizeTimeout);
-      window.resizeTimeout = setTimeout(() => {
-        setWindowDimensions(window.innerWidth);
-      }, 500);
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
 
-    window.addEventListener('resize', resizeListener);
-
-    return () => {
-      window.removeEventListener('resize', resizeListener);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+        clearTimeout(window.resizeTimeout);
+      };
+    }
+  }, [handleResize]);
 
   return windowDimensions;
 }

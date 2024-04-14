@@ -36,6 +36,9 @@
     margin: 2rem 1rem;
     max-width: 600px;
 
+    .p-text {
+      margin-top: 10px;}
+
     @media screen and (min-width: 2000px) {
       max-width: 1200px;
     }

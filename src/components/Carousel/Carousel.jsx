@@ -1,58 +1,65 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { client, urlFor } from '../../client';
-import { throttle } from 'lodash';
-
 import './Carousel.scss';
 
-const CarouselElement = (props) => {
+// Simplified throttle function
+const throttle = (func, limit) => {
+  let inThrottle;
+  return function () {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+const useImages = (isLandscape) => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const isLandscape = useMemo(
-    () => window.innerWidth > window.innerHeight,
-    [window.innerWidth, window.innerHeight],
-  );
-  const queryType = isLandscape ? 'horizontalSlideshow' : 'verticalSlideshow';
+  const fetchImages = useCallback(() => {
+    const queryType = isLandscape ? 'horizontalSlideshow' : 'verticalSlideshow';
+    const cachedImages = sessionStorage.getItem(queryType);
 
-  const fetchImages = () => {
-    // Only fetch if not in cache or if the queryType changes
-    if (!sessionStorage.getItem(queryType)) {
+    if (cachedImages) {
+      setImages(JSON.parse(cachedImages));
+      setLoading(false);
+    } else {
       client
-        .fetch(
-          `*[_type == "${queryType}"] | order(order asc) {
-            title,
-            image
-          }`,
-        )
+        .fetch(`*[_type == "${queryType}"] | order(order asc) { title, image }`)
         .then((data) => {
           setImages(data);
+          sessionStorage.setItem(queryType, JSON.stringify(data));
           setLoading(false);
-          sessionStorage.setItem(queryType, JSON.stringify(data)); // Cache the data
         })
         .catch((error) => {
           console.error(error);
-          setLoading(false);
           setError('Failed to load images');
+          setLoading(false);
         });
-    } else {
-      setImages(JSON.parse(sessionStorage.getItem(queryType)));
-      setLoading(false);
     }
-  };
+  }, [isLandscape]);
+
+  useEffect(() => fetchImages(), [fetchImages]);
+
+  return { images, loading, error, fetchImages }; // Return fetchImages here
+};
+
+const CarouselElement = React.memo((props) => {
+  const isLandscape = useMemo(() => window.innerWidth > window.innerHeight, []);
+  const { images, loading, error, fetchImages } = useImages(isLandscape); // Receive fetchImages here
 
   useEffect(() => {
-    fetchImages();
-
-    const handleResize = throttle(() => {
-      fetchImages();
-    }, 1000);
-
+    const handleResize = throttle(fetchImages, 1000);
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-  }, [queryType]);
+  }, [fetchImages]);
 
   if (loading) {
     return (
@@ -64,9 +71,7 @@ const CarouselElement = (props) => {
     );
   }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <Carousel indicators={false} interval={4000} pause={false} {...props}>
@@ -81,6 +86,6 @@ const CarouselElement = (props) => {
       ))}
     </Carousel>
   );
-};
+});
 
 export default CarouselElement;

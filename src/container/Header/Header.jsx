@@ -24,10 +24,7 @@ const Header = () => {
 
   const handleCarouselClick = () => {
     setIsVisible(false);
-
-    if (timerId) {
-      clearTimeout(timerId);
-    }
+    clearTimeout(timerId);
 
     const newTimerId = setTimeout(() => {
       setIsVisible(true);
@@ -37,11 +34,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    return () => {
-      if (timerId) {
-        clearTimeout(timerId);
-      }
-    };
+    return () => clearTimeout(timerId);
   }, [timerId]);
 
   return (
@@ -66,48 +59,30 @@ const Header = () => {
             style={{ opacity }}
           >
             <h1 className="head-text">Fine Bas Relief Plaster Paintings</h1>
-            <p className="p-text" style={{ color: '#fff' }}>
-              Commisions available
+            <p className="p-text">
+              Commissions available
               <br />
-              Studio visit by appointment{'\u00A0'}only
+              Studio visit by appointment only
               <br />
               Blue Mountain Beach, FL
             </p>
             <div className="header__buttons">
               <motion.button
-                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="header__caption-button"
                 onClick={() => (window.location.href = '#contact')}
               >
-                schedule here
+                Schedule Here
               </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                whileTap={{ scale: 0.95 }}
-                className="header__caption-button header__caption-button_social"
-                onClick={() =>
-                  window.open(
-                    'https://www.facebook.com/SarahStewartFineArt',
-                    '_blank',
-                  )
-                }
-              >
-                <FaFacebookF />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                whileTap={{ scale: 0.95 }}
-                className="header__caption-button header__caption-button_social"
-                onClick={() =>
-                  window.open(
-                    'https://www.instagram.com/sarahstewartfineart/',
-                    '_blank',
-                  )
-                }
-              >
-                <FaInstagram />
-              </motion.button>
+              <SocialButton
+                icon={<FaFacebookF />}
+                url="https://www.facebook.com/SarahStewartFineArt"
+              />
+              <SocialButton
+                icon={<FaInstagram />}
+                url="https://www.instagram.com/sarahstewartfineart/"
+              />
             </div>
           </motion.div>
         )}
@@ -115,5 +90,16 @@ const Header = () => {
     </header>
   );
 };
+
+const SocialButton = ({ icon, url }) => (
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="header__caption-button header__caption-button_social"
+    onClick={() => window.open(url, '_blank')}
+  >
+    {icon}
+  </motion.button>
+);
 
 export default Header;
