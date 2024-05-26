@@ -1,6 +1,6 @@
-# Sarah Stewart's Portfolio Website 🎨
+# Artist's Portfolio Website
 
-Welcome to the repository for Sarah Stewart's Portfolio website. As an accomplished bas-relief plaster artist, poet, and illustrator, this site captures the essence of her artistry, presenting it through a beautifully designed, adaptive interface.
+This is the portfolio website of Sarah Stewart, a bas-relief plaster artist, poet, and illustrator. The site captures the essence of her artistry and presents it through a beautifully designed, adaptive interface.
 
 ## 🖼 Features
 
@@ -9,12 +9,11 @@ Welcome to the repository for Sarah Stewart's Portfolio website. As an accomplis
 - **Dynamic Content:** Integrated with Sanity.io backend, it allows the artist to easily update her artworks, testimonials, and other content without diving into code.
 - **Contact Form:** Using `emailjs`, visitors can reach out directly through the website.
 - **Mapping Feature:** The `leaflet` library is utilized for an interactive location view of her studio and exhibit locations.
-- **Bootstrap Framework:** Ensures a consistent and modern design layout throughout the site.
+- **Higher-Order Components (HOC):** Ensures consistent and reusable design patterns throughout the site.
 
 ## 🛠 Technology Stack
 
 - **Frontend:** React.js
-- **Styling & Components:** Bootstrap
 - **Animations:** Framer Motion
 - **Backend:** Sanity.io
 - **Contact Form:** EmailJS
@@ -28,7 +27,7 @@ Follow the steps below to set up the project on your local machine:
 ```
 git clone https://github.com/FrontEnd-Guy/sarah-stewart.git
 ```
-3. **Navigate to the project directory**:
+2. **Navigate to the project directory**:
 ```
 cd sarah-stewart
 ```
@@ -60,7 +59,6 @@ You should now have the app running in development mode. Open [http://localhost:
 ## 🌍 Live Site
 
 - [sarahstewartfineart.com](https://www.sarahstewartfineart.com)
-- [GH pages](https://frontend-guy.github.io/sarah-stewart/)
 
 ## 📬 Contact
 
